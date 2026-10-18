@@ -1,22 +1,28 @@
 # Bank Management System
 
-A Python-based command-line interface (CLI) application designed to handle banking operations such as creating accounts, managing balances, and recording transactions with JSON-backed persistence.
+A beginner-friendly web app built with Python, Flask, HTML, CSS, and JSON file storage.
 
 ## Features
+- Create accounts with unique account numbers
+- View and search accounts
+- Deposit and withdraw money
+- Prevent negative transactions and withdrawals above the available balance
+- Delete accounts
+- Dashboard totals and recent transaction history
 
-- **Account Management**: Create and track user bank accounts with unique identifiers.
-- **Core Banking Operations**: Deposit, withdraw, and check real-time account balances.
-- **Data Persistence**: Uses `bank.json` to store and load records automatically across sessions.
-- **Error Handling**: Gracefully handles missing records and uninitialized data files.
+## Run on Windows
 
-## Tech Stack
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python app.py
+```
 
-- **Language**: Python 3
-- **Data Storage**: JSON (`bank.json`)
+Open http://127.0.0.1:5000 in your browser.
 
-## How to Run
+## Data files
+`bank.json` stores account data. `transactions.json` stores up to 100 recent transactions.
 
-1. **Clone the repository**:
-   ```bash
-   git clone [https://github.com/](https://github.com/)<YOUR-USERNAME>/Bank_Management_System.git
-   cd Bank_Management_System
+## Important
+This is an educational local demo, not a real banking system. It has no login, authorization, or production-grade transaction security. Do not use real customer information or real money. Before deployment, use secure authentication, a database with transactions, CSRF protection, and production server settings.
